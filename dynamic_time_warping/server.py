@@ -57,14 +57,14 @@ class Handler(SimpleHTTPRequestHandler):
 
 def run(host="127.0.0.1", port=5173):
     server = ThreadingHTTPServer((host, port), Handler)
-    print(f"SequenceWarp running at http://{host}:{port}")
+    print(f"Dynamic Time Warping running at http://{host}:{port}")
     server.serve_forever()
 
 
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Run SequenceWarp")
+    parser = argparse.ArgumentParser(description="Run Dynamic Time Warping")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=5173)
     args = parser.parse_args()
